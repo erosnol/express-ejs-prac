@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= pageTitle %>
+    </title>
+</head>
+
+<body>
+    <nav>
+        <a href="/" class="href">Go to Main</a>
+    </nav>
+    <h1>Products</h1>
+    <ul>
+        <% data.map ((items, index)=> { %>
+            <li>
+                    <label for="title"> title: </label>
+                    <%= items.title %>
+                    <br>
+                    <label for="price">Price: $</label>
+                    <%= items.price %>
+                        <br>
+                    <label for="description"> Description: </label>
+                    <%= items.description %>
+
+            </li>
+            <% }) %>
+    </ul>
+
+</body>
+
+</html>
